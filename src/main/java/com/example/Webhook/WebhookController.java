@@ -21,7 +21,8 @@ public class WebhookController {
       }
 
       @RequestMapping(value = "Check2", method = RequestMethod.GET)
-    	public void getWebhookDataCHECK2() {
+    	public String getWebhookDataCHECK2() {
         System.out.println("webhoooook : ");
+        return "Get Call";
 }
 }
