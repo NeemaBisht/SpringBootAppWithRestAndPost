@@ -28,7 +28,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: java-app
-          path: '${{ github.workspace }}/target'
+          path: '${{ github.workspace }}'
 
   deploy:
     runs-on: windows-latest
@@ -43,7 +43,7 @@ jobs:
         uses: actions/download-artifact@v2
         with:
           name: java-app
-          path: '${{ github.workspace }}/target'
+          path: '${{ github.workspace }}'
 
       - name: Deploy to Azure Web App
         id: deploy-to-webapp
