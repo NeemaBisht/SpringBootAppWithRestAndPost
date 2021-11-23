@@ -16,6 +16,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: mkdir -p myartifact
+      - run: chmod 777 myartifact
 
       - name: Set up Java version
         uses: actions/setup-java@v1
