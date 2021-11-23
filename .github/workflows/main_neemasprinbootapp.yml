@@ -21,7 +21,7 @@ jobs:
         with:
           java-version: '11'
 
-      - name: Build with Maven
+      - name: Build with gradle
         run: ./gradlew build
 
       - name: Upload artifact for deployment job
@@ -39,7 +39,7 @@ jobs:
 
     steps:
       - name: Download artifact from build job
-        uses: actions/download-artifact@v2
+        uses: actions/checkout@v2
         with:
           name: java-app
 
